@@ -1,5 +1,4 @@
 import { Quote } from "lucide-react";
-import { motion } from "framer-motion";
 
 const testimonials = [
   { quote: "A rotina de projetos me ajudou a transformar curiosidade em direção. Hoje tenho mais clareza sobre o profissional que quero ser.", name: "Marina Alves", course: "Estudante demonstrativa de Administração", initials: "MA" },
@@ -10,8 +9,7 @@ const testimonials = [
 function Testimonials() {
   return (
     <section className="w-full bg-white px-5 py-24 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full max-w-7xl"><div className="text-center"><p className="text-sm font-bold uppercase tracking-[3px] text-blue-700">Vozes da jornada</p><h2 className="mt-3 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">Aprender também é encontrar seu lugar.</h2><p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-gray-600">Relatos acadêmicos demonstrativos, criados para ilustrar diferentes experiências na universidade.</p></div>
-        <div className="mt-12 grid items-stretch gap-5 lg:grid-cols-3">{testimonials.map(({ quote, name, course, initials }, index) => <motion.article key={name} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }} className="flex h-full min-w-0 flex-col rounded-3xl border border-gray-100 bg-slate-50 p-7"><Quote className="shrink-0 text-blue-700" size={25} /><p className="mt-6 text-base leading-7 text-gray-700">“{quote}”</p><div className="mt-auto flex items-center gap-3 border-t border-gray-200 pt-5"><div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white">{initials}</div><div className="min-w-0"><p className="text-sm font-bold text-gray-950">{name}</p><p className="mt-0.5 break-words text-xs text-gray-500">{course}</p></div></div></motion.article>)}</div>
+      <div className="mx-auto w-full max-w-7xl"><div className="grid gap-10 lg:grid-cols-[0.65fr_1.35fr]"><div><h2 className="font-[Newsreader] text-5xl font-medium leading-none text-[#102A43] sm:text-6xl">Quem vive a jornada conta melhor.</h2><p className="mt-6 max-w-xs text-sm leading-6 text-[#486581]">Relatos acadêmicos demonstrativos sobre diferentes formas de encontrar seu lugar na universidade.</p></div><div className="border-t-2 border-[#102A43]">{testimonials.map(({ quote, name, course, initials }, index) => <article key={name} className="grid gap-5 border-b border-[#102A43]/20 py-7 sm:grid-cols-[52px_1fr_180px] sm:items-start sm:gap-7"><span className="font-[Newsreader] text-2xl text-[#B8D334]">0{index + 1}</span><div><Quote className="text-[#B8D334]" size={23} /><p className="mt-4 max-w-xl font-[Newsreader] text-2xl leading-tight text-[#102A43]">“{quote}”</p></div><div className="text-sm text-[#486581]"><strong className="block text-[#102A43]">{initials} · {name}</strong><span className="mt-1 block">{course}</span></div></article>)}</div></div>
       </div>
     </section>
   );

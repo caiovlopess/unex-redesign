@@ -1,5 +1,4 @@
-import { Compass, FlaskConical, Network, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowUpRight, Compass, FlaskConical, Network, Sparkles } from "lucide-react";
 
 const benefits = [
   { title: "Estrutura que acolhe", text: "Ambientes projetados para estudar, trocar e experimentar com conforto.", icon: Sparkles },
@@ -11,20 +10,14 @@ const benefits = [
 function Benefits() {
   return (
     <section className="w-full bg-white px-5 py-24 sm:px-6 lg:px-8">
-      <div className="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-        <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="min-w-0">
-          <p className="text-sm font-bold uppercase tracking-[3px] text-blue-700">Mais que uma graduação</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">Uma experiência para ir além da sala de aula.</h2>
-          <p className="mt-5 max-w-lg leading-7 text-gray-600">Na Unex, cada etapa é uma oportunidade para descobrir sua potência e construir uma trajetória com sentido.</p>
-        </motion.div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {benefits.map(({ title, text, icon: Icon }, index) => (
-            <motion.div key={title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.07 }} className="flex h-full min-w-0 flex-col rounded-3xl border border-gray-100 bg-slate-50 p-6">
-              <Icon className="text-blue-700" size={26} />
-              <h3 className="mt-6 font-bold text-gray-950">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-gray-600">{text}</p>
-            </motion.div>
-          ))}
+      <div className="mx-auto w-full max-w-7xl">
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div><h2 className="max-w-sm font-[Newsreader] text-5xl font-medium leading-none text-[#102A43] sm:text-6xl">Uma formação que não cabe numa sala.</h2><p className="mt-6 max-w-sm text-sm leading-6 text-[#486581]">A experiência universitária acontece nas relações, nos projetos e na coragem de fazer perguntas melhores.</p></div>
+          <div className="border-t-2 border-[#B8D334]">
+            {benefits.map(({ title, text, icon: Icon }, index) => (
+              <div key={title} className="grid gap-4 border-b border-[#102A43]/20 py-6 sm:grid-cols-[56px_0.8fr_1fr_auto] sm:items-center sm:gap-6"><span className="font-[Newsreader] text-3xl text-[#B8D334]">0{index + 1}</span><Icon size={24} strokeWidth={1.7} className="text-[#102A43]" /><div><h3 className="font-[Newsreader] text-2xl font-medium text-[#102A43]">{title}</h3><p className="mt-1 text-sm leading-6 text-[#486581]">{text}</p></div><ArrowUpRight size={19} className="hidden text-[#102A43] sm:block" /></div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,4 @@
 import { ArrowUpRight, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
 
 const units = [
   { city: "Feira de Santana", region: "Portal do sertão", code: "FS" },
@@ -10,13 +9,14 @@ const units = [
 
 function Units() {
   return (
-    <section id="unidades" className="w-full bg-slate-50 px-5 py-24 sm:px-6 lg:px-8">
+    <section id="unidades" className="w-full bg-[#F4F0E8] px-5 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-7xl">
-        <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><p className="text-sm font-bold uppercase tracking-[3px] text-blue-700">Onde estamos</p><h2 className="mt-3 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">Perto de onde a vida acontece.</h2></div><p className="max-w-sm text-sm leading-6 text-gray-600">Uma rede de campi para levar ensino de qualidade a diferentes pontos da Bahia.</p></div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {units.map(({ city, region, code }, index) => (
-            <motion.a href="#inscricao" key={city} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.06 }} className="group relative flex min-h-56 min-w-0 h-full flex-col overflow-hidden rounded-3xl bg-blue-900 p-6 text-white shadow-lg shadow-blue-900/10"><div className="absolute -right-8 -top-8 h-32 w-32 rounded-full border-[18px] border-white/10" /><span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-sm font-black">{code}</span><div className="relative mt-auto pr-8"><div className="flex items-center gap-2 text-blue-200"><MapPin size={15} /> <span className="text-xs uppercase tracking-wider">Campus</span></div><h3 className="mt-2 text-xl font-bold break-words">{city}</h3><p className="mt-1 text-sm text-blue-200">{region}</p></div><ArrowUpRight size={19} className="absolute bottom-6 right-6 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></motion.a>
+        <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]"><div><h2 className="max-w-sm font-[Newsreader] text-5xl font-medium leading-none text-[#102A43] sm:text-6xl">Perto de onde a vida acontece.</h2><p className="mt-6 max-w-sm text-sm leading-6 text-[#486581]">Quatro cidades, uma rede de possibilidades para estudar sem deixar de pertencer ao seu território.</p></div>
+        <div className="relative border-l border-[#102A43]/25 pl-6 sm:pl-10"><div className="absolute bottom-0 left-[-5px] top-0 w-2 bg-[#B8D334]" />
+          {units.map(({ city, region, code }) => (
+            <a href="#inscricao" key={city} className="group grid min-w-0 grid-cols-[42px_1fr_auto] items-center gap-4 border-b border-[#102A43]/20 py-6 sm:grid-cols-[64px_1fr_1fr_auto] sm:gap-6"><span className="font-[Newsreader] text-3xl text-[#7A8C3A]">{code}</span><div><div className="flex items-center gap-2 text-xs font-bold text-[#7A8C3A]"><MapPin size={14} /> Campus</div><h3 className="mt-1 font-[Newsreader] text-2xl font-medium text-[#102A43]">{city}</h3></div><p className="hidden text-sm leading-6 text-[#486581] sm:block">{region}. Uma comunidade conectada ao que você quer construir.</p><ArrowUpRight size={20} className="text-[#102A43] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" /></a>
           ))}
+        </div>
         </div>
       </div>
     </section>
