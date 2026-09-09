@@ -1,16 +1,19 @@
-# React + Vite
+# Unex Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Projeto de redesign do site institucional da Unex (unex.edu.br), desenvolvido com o objetivo de melhorar a organização das informações, a experiência de navegação e a apresentação visual da plataforma.
 
-Currently, two official plugins are available:
+Além do redesign das páginas existentes, foi desenvolvido um chatbot integrado ao site para auxiliar candidatos com dúvidas sobre cursos, unidades e processo seletivo. O chatbot utiliza Node.js, Express e a API do Google Gemini, com uma base de conhecimento específica para as informações da instituição.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias
 
-## React Compiler
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+- Node.js
+- Express
+- Google Gemini API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Projeto
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Este projeto foi desenvolvido para fins acadêmicos e de portfólio, sendo uma proposta de redesign do site existente da Unex, sem vínculo oficial com a instituição.
