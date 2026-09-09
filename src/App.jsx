@@ -8,6 +8,7 @@ import Testimonials from "./components/Testimonials";
 import News from "./components/News";
 import LeadForm from "./components/LeadForm";
 import Footer from "./components/Footer";
+import ChatWidget from './components/ChatWidget';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <LeadForm />
       </main>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
